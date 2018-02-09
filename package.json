@@ -10,10 +10,16 @@
   "author": "Snaebjorn Eyjolfsson",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
     "faker": "^4.1.0",
+    "graphiql": "^0.11.11",
+    "graphql": "^0.11.0",
     "lodash": "^4.17.5",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "sequelize": "^4.33.1"
   },
   "devDependencies": {
