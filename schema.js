@@ -38,6 +38,12 @@ const Person = new GraphQLObjectType({
                 resolve(person) {
                     return person.email;
                 }
+            },
+            posts: {
+                type: new GraphQLList(Post),
+                resolve(person) {
+                    return person.getPosts();
+                }
             }
         }
     }
@@ -65,6 +71,12 @@ const Post = new GraphQLObjectType({
                 resolve(post) {
                     return post.content
                 }
+            },
+            person: {
+                type: Person,
+                resolve(post) {
+                    return post.getPerson();
+                }
             }
         }
     }
@@ -87,6 +99,12 @@ const Query = new GraphQLObjectType({
                 },
                 resolve(root, args) {
                     return Db.models.person.findAll({where: args});
+                }
+            },
+            posts: {
+                type: new GraphQLList(Post),
+                resolve(root, args) {
+                    return Db.models.post.findAll({where: args});
                 }
             }
         }
