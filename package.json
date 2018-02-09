@@ -1,0 +1,24 @@
+{
+  "name": "graphql-blog-api",
+  "version": "1.0.0",
+  "description": "Simple blog api using graphql, for learning purposes",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js --presets es2015,stage-2",
+    "test": "node index.js"
+  },
+  "author": "Snaebjorn Eyjolfsson",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "lodash": "^4.17.5",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.33.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
